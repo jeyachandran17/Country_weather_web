@@ -23,12 +23,20 @@ var data = fetch("https://restcountries.com/v3.1/all")
                 let lng = data[i].latlng[1];
                 // console.log(country_name,flag,capital,region,country_code,lat,lng);
                 row.innerHTML += ` <div class="col-lg-4, col-sm-12" id="card">
-                <h6 class="head_tag">${country_name}</h6>
-                <img src="${flag}" alt="country flag"><br>
-                <label for="captial" class="details">Captial : ${capital}</label><br>
-                <label for="Region" class="details">Region : ${region}</label><br>
-                <label for="Country-code" class="details">Country Code : ${country_code}</label><br>
-                <button type="button" class="btn btn-primary" id="btn" onclick="weather_cheak(${lat},${lng})">Click for Weather</button>
+                <div class="heading-container">
+                    <h6 class="head_tag">${country_name}</h6>
+                </div>
+                <div class="flag-container">
+                    <img src="${flag}" alt="country flag">
+                </div>
+                <div class="label">
+                    <label for="captial" class="details">Captial : ${capital}</label>
+                    <label for="Region" class="details">Region : ${region}</label>
+                    <label for="Country-code" class="details">Country Code : ${country_code}</label>
+                </div>
+                <div class="button">
+                    <button type="button" class="btn btn-primary" id="btn" onclick="weather_cheak(${lat},${lng})">Click for Weather</button>
+                </div>
             </div> `;
             document.body.append(create_container)
             } 

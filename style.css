@@ -1,34 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 #card{
     border: 2px solid gray;
     height: 400px;
     width: 225px;
-    /* margin-right: 20px;
-    margin-bottom: 20px; */
+    padding: 10px;
     background-image: linear-gradient(to right, rgba(243, 210, 24, 0.79) , rgb(88, 86, 86));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .head_tag{
-    margin-top: 5px;
+    display: flex;
+    justify-content: center;
     border: 2px solid gray;
     background-color : black;
     color:white;
-    text-align: center;
     height: 40px;
+    align-items: center;
+
 }
 
-label{
-    color: white;
-    font-size: smaller;
-    text-align: center;
-    margin-left: 30px;
-    margin-bottom: 2px;
+.label{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 120px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
 }
 
 #btn{
-    margin-top: 20px;
-    margin-left: 25px;
     background-color: transparent;
     border: 2px solid white;
 }
@@ -43,6 +53,7 @@ label{
 
 img{
     width:200px ;
+    height: 120px;
     border: 2px solid gray;
     margin-bottom: 20px;
 }
@@ -51,11 +62,11 @@ body{
     background-color:rgba(24, 24, 24, 0.903);
 }
 
-
 .row{
     display: flex;
     flex-wrap: wrap;
     min-height: 100vh;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-evenly;
+    gap: 25px;
+    padding: 20px;
 }
